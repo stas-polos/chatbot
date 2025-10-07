@@ -3,6 +3,6 @@
 set -e
 set -x
 
-mypy src
-ruff check src
-ruff format src --check
+poetry run mypy src
+poetry run ruff check src
+poetry run ruff format src --check

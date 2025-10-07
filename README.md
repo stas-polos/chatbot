@@ -56,3 +56,8 @@ Connect to docker container
 ```bash
 docker compose exec streamlit-ui bash
 ```
+
+For run app:
+```
+poetry run streamlit run src/app.py --server.port 8050 --server.address  0.0.0.0
+```
