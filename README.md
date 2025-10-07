@@ -25,7 +25,7 @@ cd .dist.env .env
 Set configuration options to `.env`
 * Settings for docker image
   * PYTHON_IMAGE_VERSION - version of python image (default: 3.12.6-slim-bullseye)
-  * LLM_MODEL_IMAGE - version of target LLM model (defaukt: )
+  * LLM_MODEL_IMAGE - version of target LLM model (default: ai/smollm2:360M-Q4_K_M)
 * Settings of application
   * PORT - Application port (default: 8050)
 * Settings for logging

@@ -17,7 +17,7 @@ services:
 
 models:
   llm:
-    model: ai/smollm2:360M-Q4_K_M
+    model: ${LLM_MODEL_IMAGE}
     context_size: 8192
     runtime_flags:
       - "--no-stream"
