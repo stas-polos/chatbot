@@ -1,8 +1,14 @@
 ### App for works with Wordpress
 
-1. [Installation](#installation)
-2. [Configuration](#configuration)
-3. [Usage](#usage)
+1. [Requirements](#requirements)
+2. [Installation](#installation)
+3. [Configuration](#configuration)
+4. [Usage](#usage)
+
+### Requirements
+* Docker 28.4.0+ / Docker Compose 2.29+
+* Python 3.12+
+* [Poetry](#https://python-poetry.org/) for dependency management
 
 ### Installation
 Clone the repository
