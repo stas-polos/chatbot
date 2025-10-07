@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  streamlit-ui:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - PYTHON_IMAGE_VERSION=${PYTHON_IMAGE_VERSION}
+    volumes:
+      - .:/app/
+    ports:
+      - "${PORT}:${PORT}"
+    models:
+      - llm
+    tty: true
+    command: ["sleep", "infinity"]
+
+models:
+  llm:
+    model: ai/smollm2:360M-Q4_K_M
+    context_size: 8192
+    runtime_flags:
+      - "--no-stream"
