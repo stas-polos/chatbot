@@ -21,9 +21,11 @@ COPY pyproject.toml poetry.lock /app/
 WORKDIR /app
 
 RUN poetry config virtualenvs.create false \
-    && poetry install \
+    && poetry install --no-root \
     && rm -rf ~/.cache/pypoetry \
     ;
 
 COPY src/ /app/src/
 COPY scripts/ /app/scripts
+
+CMD poetry run streamlit run src/app.py --server.port ${PORT} --server.address 0.0.0.0

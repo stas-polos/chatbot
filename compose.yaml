@@ -9,14 +9,12 @@ services:
       - .:/app/
     ports:
       - "${PORT}:${PORT}"
+    environment:
+      PORT: ${PORT}
     models:
       - llm
-    tty: true
-    command: ["sleep", "infinity"]
 
 models:
   llm:
     model: ${LLM_MODEL_IMAGE}
     context_size: 8192
-    # runtime_flags:
-    #   - "--no-stream"
